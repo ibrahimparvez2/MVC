@@ -1,0 +1,47 @@
+﻿@model MoviesCollection.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<h4>Movie</h4>
+
+
+<dl>
+
+    <dt>
+        @Html.DisplayNameFor(m=> m.Title)
+    </dt>
+    <dd>
+        @Html.DisplayFor(m=> m.Title)
+    </dd>
+
+   
+
+    <dt>
+        @Html.DisplayNameFor(m => m.ReleaseDate)
+    </dt>
+    <dd>
+        @Html.DisplayFor(m => m.ReleaseDate)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(m => m.Genre)
+    </dt>
+    <dd>
+        @Html.DisplayFor(m => m.Genre)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(m => m.Price)
+    </dt>
+    <dd>
+        @Html.DisplayFor(m => m.Price)
+    </dd>
+
+</dl>
+<p>
+@Html.ActionLink("Edit Record", "Edit", new { id = Model.Id })
+@Html.ActionLink("Back To List", "Index")
+</p>
